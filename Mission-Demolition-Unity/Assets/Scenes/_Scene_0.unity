@@ -678,10 +678,10 @@ MonoBehaviour:
   minX: -20
   maxX: 100
   returnProjectileVelocity: 0.1
-  waitReturnTime: 3
+  waitReturnTime: 2
   easing: 0.05
   nextView: 1
-  camSnapDistance: 0.25
+  camSnapDistance: 0.5
   camStartPos: {x: 0, y: 0, z: 0}
   destinationPos: {x: 0, y: 0, z: 0}
   waitedTime: 0
