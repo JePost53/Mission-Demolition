@@ -24,17 +24,12 @@ public class Slingshot : MonoBehaviour
         launchPoint.SetActive(false);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         aimingUpdate();
     }
+
 
     void aimingUpdate()
     {
@@ -71,6 +66,7 @@ public class Slingshot : MonoBehaviour
             Camera.main.GetComponent<FollowCam>().pointOfInterest = projectile;
             Instantiate<GameObject>(linePrefab, projectile.transform);
             projectile = null;
+            MissionDemolition.SHOT_FIRED();
         }
     }
 

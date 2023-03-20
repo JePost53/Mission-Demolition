@@ -14,7 +14,7 @@ PrefabInstance:
     - target: {fileID: -3023969212212103186, guid: d238954d5eeec0043892edb64830275d, type: 3}
       propertyPath: audSource
       value: 
-      objectReference: {fileID: 7326965373096291041, guid: d238954d5eeec0043892edb64830275d, type: 3}
+      objectReference: {fileID: 8852178239639717798}
     - target: {fileID: -3023969212212103186, guid: d238954d5eeec0043892edb64830275d, type: 3}
       propertyPath: pitchFactor
       value: 1.05
@@ -96,6 +96,11 @@ PrefabInstance:
 --- !u!1 &2637992455181062314 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4317779086373862893, guid: d238954d5eeec0043892edb64830275d, type: 3}
+  m_PrefabInstance: {fileID: 2267524043808107847}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &8852178239639717798 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7326965373096291041, guid: d238954d5eeec0043892edb64830275d, type: 3}
   m_PrefabInstance: {fileID: 2267524043808107847}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &3641947178867802986

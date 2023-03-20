@@ -6,11 +6,19 @@ public class Projectile : MonoBehaviour
 {
     public bool awake = true;
 
+    static List<Projectile> PROJECTILES = new List<Projectile>();
+
     [Header("Inscribed")]
     public float minSpeed = 0.1f;
 
     [Header("Dynamic")]
     public float speed = 0f;
+
+
+    void Start()
+    {
+        PROJECTILES.Add(this);
+    }
 
     void FixedUpdate()
     {
@@ -24,5 +32,16 @@ public class Projectile : MonoBehaviour
             return;
         }
         awake = true;
+    }
+
+    private void OnDestroy()
+    {
+        PROJECTILES.Remove(this);
+    }
+
+    static public void DESTROY_PROJECTILES()
+    {
+        foreach (Projectile p in PROJECTILES)
+            Destroy(p.gameObject);
     }
 }

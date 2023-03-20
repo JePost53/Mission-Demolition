@@ -51,7 +51,7 @@ public class FollowCam : MonoBehaviour
 
         Rigidbody poiRb = pointOfInterest.GetComponent<Rigidbody>();
         //if (poiRb != null && poiRb.IsSleeping())
-        if (poiRb != null && poiRb.velocity.magnitude <= returnProjectileVelocity)
+        if (poiRb != null && (poiRb.velocity.magnitude <= returnProjectileVelocity || pointOfInterest.transform.position.y < minY))
         {
             DelayedCameraReturn();
             return;

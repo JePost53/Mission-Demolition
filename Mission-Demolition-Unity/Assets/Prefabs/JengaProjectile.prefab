@@ -252,7 +252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 129fdab5af8ef0248b8903b05e855462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BONKsfx: {fileID: 8300000, guid: fa889ed6502aca84e83e24e3d355c563, type: 3}
+  bonkSFX: {fileID: 8300000, guid: fa889ed6502aca84e83e24e3d355c563, type: 3}
   audSource: {fileID: 8189961437455909207}
   magnitudeFactor: 10
-  pitchFactor: 1
