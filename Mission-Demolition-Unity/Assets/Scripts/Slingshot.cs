@@ -63,6 +63,8 @@ public class Slingshot : MonoBehaviour
             Rigidbody projRb = projectile.GetComponent<Rigidbody>();
             projRb.isKinematic = false;
             projRb.velocity = -mouseDelta * velocityMultiplier;
+            FollowCam.SWITCH_VIEW(FollowCam.eView.slingshot);
+
             Camera.main.GetComponent<FollowCam>().pointOfInterest = projectile;
             Instantiate<GameObject>(linePrefab, projectile.transform);
             projectile = null;

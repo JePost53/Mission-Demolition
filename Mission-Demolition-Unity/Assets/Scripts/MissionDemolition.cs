@@ -52,6 +52,7 @@ public class MissionDemolition : MonoBehaviour
             // Change mode to stop checking for level end
             mode = GameMode.levelEnd;
 
+            FollowCam.SWITCH_VIEW(FollowCam.eView.both);
             // Start next level in 2 seconds
             Invoke("NextLevel", GoalWaitTime);
         }
@@ -73,6 +74,9 @@ public class MissionDemolition : MonoBehaviour
 
         // Reset the goal
         Goal.goalMet = false;
+
+         // Zoom out camera to show both castle and slingshot
+        FollowCam.SWITCH_VIEW(FollowCam.eView.both);
 
         UpdateGUI();
 
