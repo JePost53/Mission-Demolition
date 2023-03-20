@@ -44,6 +44,7 @@ public class Slingshot : MonoBehaviour
         Vector3 mousePos2D = Input.mousePosition;
         mousePos2D.z = -Camera.main.transform.position.z;
         Vector3 mousePos3d = Camera.main.ScreenToWorldPoint(mousePos2D);
+        mousePos3d.z = launchPoint.transform.position.z;
 
         Vector3 mouseDelta = mousePos3d - launchPoint.transform.position;
         float maxMagnitude = this.GetComponent<SphereCollider>().radius;
