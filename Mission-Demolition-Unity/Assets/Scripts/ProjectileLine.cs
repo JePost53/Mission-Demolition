@@ -29,7 +29,7 @@ public class ProjectileLine : MonoBehaviour
         {
             _line.positionCount++;
             _line.SetPosition(_line.positionCount - 1, transform.position);
-            Debug.Log("LINE DRAWING! " + _projectile.awake);
+            //Debug.Log("LINE DRAWING! " + _projectile.awake);
             if(_projectile  && !_projectile.awake)
             {
                 _drawing = false;

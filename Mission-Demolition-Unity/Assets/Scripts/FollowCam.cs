@@ -17,6 +17,8 @@ public class FollowCam : MonoBehaviour
     public Vector3 camStartPos;
     public Vector3 destinationPos;
 
+     // When the projectile goes below this velocity, the camera returns
+    public float returnProjectileVelocity; 
     public float waitReturnTime = 3;
     public float waitedTime = 0;
 
@@ -48,7 +50,8 @@ public class FollowCam : MonoBehaviour
         }
 
         Rigidbody poiRb = pointOfInterest.GetComponent<Rigidbody>();
-        if (poiRb != null && poiRb.IsSleeping())
+        //if (poiRb != null && poiRb.IsSleeping())
+        if (poiRb != null && poiRb.velocity.magnitude <= returnProjectileVelocity)
         {
             DelayedCameraReturn();
             return;

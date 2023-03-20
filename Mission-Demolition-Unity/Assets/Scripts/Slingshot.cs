@@ -16,6 +16,8 @@ public class Slingshot : MonoBehaviour
 
     public float velocityMultiplier;
 
+    public bool jengaProjectile = false;
+
     void Awake()
     {
         launchPoint = transform.Find("LaunchPoint").gameObject;
@@ -53,6 +55,8 @@ public class Slingshot : MonoBehaviour
 
         Vector3 newProjectilePos = launchPoint.transform.position + mouseDelta;
         projectile.transform.position = newProjectilePos;
+        if (jengaProjectile)
+            projectile.transform.LookAt(launchPoint.transform.position);
 
             // Fire the projectile!!!
         if (Input.GetMouseButtonUp(0))

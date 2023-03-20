@@ -7,10 +7,10 @@ public class Projectile : MonoBehaviour
     public bool awake = true;
 
     [Header("Inscribed")]
-    public float minSpeed;
+    public float minSpeed = 0.1f;
 
     [Header("Dynamic")]
-    public float speed;
+    public float speed = 0f;
 
     void FixedUpdate()
     {
